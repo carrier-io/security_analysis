@@ -50,6 +50,12 @@ class Module(module.ModuleModel):
             kind="slot",
             prefix="security_analysis_overview_",
             weight=10,
+            permissions={
+                "permissions": ["security.overview"],
+                "recommended_roles": {
+                    "default": {"admin": True, "editor": True, "viewer": True},
+                }
+            }
         )
         self.descriptor.init_rpcs()
         self.descriptor.init_api()
