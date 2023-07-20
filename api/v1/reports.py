@@ -23,7 +23,7 @@ class API(Resource):
         if start_time := request.args.get('start_time'):
             start_time = datetime.fromisoformat(start_time.strip('Z'))
 
-        security_plugins = ['application', ]
+        security_plugins = ['application', 'code', ]
         for plugin in security_plugins:
             try:
                 reports = self.module.context.rpc_manager.call_function_with_timeout(
