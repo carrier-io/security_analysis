@@ -13,7 +13,7 @@ class API(Resource):
 
     def get(self, project_id: int):
         result = []
-        security_plugins = ['application', 'code', ]
+        security_plugins = ['application', 'code', 'infrastructure', ]
         for plugin in security_plugins:
             try:
                 tests = self.module.context.rpc_manager.call_function_with_timeout(
