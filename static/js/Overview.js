@@ -36,6 +36,7 @@ const OverviewPage = {
             this.healthColor = data.application.health
             this.applicationReports = data.application.reports
             this.applicationReports = this.applicationReports.concat(data.code.reports)
+            this.applicationReports = this.applicationReports.concat(data.infrastructure.reports)
             $('#table_reports_overview').bootstrapTable('load', this.applicationReports);
         })
          ApiFetchTests().then(data => {
