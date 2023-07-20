@@ -27,16 +27,16 @@ class API(Resource):
         for plugin in security_plugins:
             try:
                 reports = self.module.context.rpc_manager.call_function_with_timeout(
-                    func=f'{plugin}_security_results_dast',
+                    func=f'{plugin}_security_get_reports',
                     timeout=3,
                     project_id=project_id,
-                    start_date=start_time,
+                    start_time=start_time,
                 )
                 unique_test_results = self.module.context.rpc_manager.call_function_with_timeout(
-                    func=f'{plugin}_security_results_dast',
+                    func=f'{plugin}_security_get_reports',
                     timeout=3,
                     project_id=project_id,
-                    start_date=start_time,
+                    start_time=start_time,
                     unique=True
                 )
                 result[plugin] = {

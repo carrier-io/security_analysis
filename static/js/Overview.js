@@ -130,7 +130,7 @@ const OverviewPage = {
                 </overview-table-cards>
             </div>
         </div>
-        
+        <!--
         <div class="card mt-3 p-28">
             <div class="header">
                 <h4 class="font-bold">Scans frequency</h4>
@@ -146,7 +146,7 @@ const OverviewPage = {
                     </overview-chart>
                 </div>
         </div>
-        
+        -->
         <div class="flex-container">
             <div class="flex-item-2">
             <TableCard
@@ -216,7 +216,7 @@ const OverviewPage = {
                 >
                     <template #actions="{master}">
                     <div class="form-group text-right mb-0">
-                        <button type="button" class="btn btn-secondary btn-icon btn-icon__purple mr-2" 
+                        <button type="button" class="btn btn-secondary btn-icon btn-icon__purple mr-2"
                             @click="master.table_action('refresh')">
                         <i class="fas fa-sync"></i>
                     </button>
