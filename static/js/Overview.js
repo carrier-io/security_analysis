@@ -165,7 +165,7 @@ const OverviewPage = {
                     instance_name="table_tests_overview"
                     header='Tests'
                     :table_attributes="tests_table_params"
-                    // :show-custom-count="true"
+                    :show-custom-count="false"
                     container_classes="my-3"
                     class="table-scroll"
                     :adaptive-height="true"
@@ -221,7 +221,7 @@ const OverviewPage = {
                     header='Latest reports'
                     :table_attributes="reports_table_params"
                     container_classes="my-3"
-                    // :show-custom-count="true"
+                    :show-custom-count="false"
                     class="table-scroll"
                     :adaptive-height="true"
                 >
