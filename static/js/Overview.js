@@ -111,7 +111,7 @@ const OverviewPage = {
                 <h3>Summary</h3>
             </div>
             <div class="card-body d-flex flex-column">
-                <div class="d-flex align-items-center">
+                <!--<div class="d-flex align-items-center">
                     <overview-filter-group
                         class="mr-2"
                         :filter-groups="defaultGroupsObj"
@@ -124,7 +124,7 @@ const OverviewPage = {
                         @change-filter="changeTimeFilter"
                     >
                     </overview-filter-time>
-                </div>
+                </div>-->
                 <overview-table-cards
                     v-bind:reports="applicationReports"
                     v-bind:healthColor="healthColor"
@@ -161,7 +161,7 @@ const OverviewPage = {
                     class="table-scroll"
                     :adaptive-height="true"
                 >
-                    <template #actions="{master}">
+                    <!--<template #actions="{master}">
                     <div class="form-group text-right mb-0">
                         <div class="dropdown dropdown_action">
                             <button class="btn btn-secondary btn-icon btn-icon__purple mr-2"
@@ -181,10 +181,10 @@ const OverviewPage = {
                             </ul>
                         </div>
                     </div>
-                    </template>
+                    </template>-->
                     <template #table_headers="{master}">
+                        <!-- data-cell-style="test_formatters.name_style" -->
                         <th scope="col" data-sortable="true"
-                            data-cell-style="test_formatters.name_style"
                             data-field="name"
                         >
                             Name
@@ -195,13 +195,13 @@ const OverviewPage = {
                         >
                             Group
                         </th>
-                        <th scope="col" data-align="right"
+                        <!--<th scope="col" data-align="right"
                             data-cell-style="test_formatters.cell_style"
                             data-formatter=test_formatters.actions
                             data-events="test_formatters.action_events"
                         >
                             Actions
-                        </th>
+                        </th>-->
                     </template>
                 </TableCard>
             </div>

@@ -106,12 +106,12 @@ const OverviewTableCards = {
     },
     template: `
     <div class="d-grid grid-column-6 gap-3 mt-3 colorful-cards">
-        <div class="card card-sm card-health" :class="health.color" v-if="health">
+        <!--<div class="card card-sm card-health" :class="health.color" v-if="health">
             <div class="card-header">
                 <i class="icon-health" :class="health.icon"></i>
             </div>
             <div class="card-body">HEALTH</div>
-        </div>
+        </div>-->
         <div class="card card-sm card-red">
             <div class="card-header">
                 <span>
@@ -159,4 +159,3 @@ const OverviewTableCards = {
 }
 
 register_component('overview-table-cards', OverviewTableCards)
-
