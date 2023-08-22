@@ -37,18 +37,19 @@ const OverviewPage = {
             this.applicationReports = data.application.reports
             this.applicationReports = this.applicationReports.concat(data.code.reports)
             this.applicationReports = this.applicationReports.concat(data.infrastructure.reports)
-            let values = this.applicationReports
-            this.applicationReports = {
-              total: values.length,
-              rows: values,
-            }
+            // let values = this.applicationReports
+            // this.applicationReports = {
+            //   total: values.length,
+            //   rows: values,
+            // }
             $('#table_reports_overview').bootstrapTable('load', this.applicationReports);
         })
          ApiFetchTests().then(data => {
-            this.securityTests = {
-              total: data.length,
-              rows: data,
-            }
+            this.securityTests = data
+            // this.securityTests = {
+            //   total: data.length,
+            //   rows: data,
+            // }
             $('#table_tests_overview').bootstrapTable('load', this.securityTests);
         })
     },
@@ -164,7 +165,7 @@ const OverviewPage = {
                     instance_name="table_tests_overview"
                     header='Tests'
                     :table_attributes="tests_table_params"
-                    :show-custom-count="true"
+                    // :show-custom-count="true"
                     container_classes="my-3"
                     class="table-scroll"
                     :adaptive-height="true"
@@ -220,7 +221,7 @@ const OverviewPage = {
                     header='Latest reports'
                     :table_attributes="reports_table_params"
                     container_classes="my-3"
-                    :show-custom-count="true"
+                    // :show-custom-count="true"
                     class="table-scroll"
                     :adaptive-height="true"
                 >
