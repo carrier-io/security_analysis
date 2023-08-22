@@ -37,10 +37,18 @@ const OverviewPage = {
             this.applicationReports = data.application.reports
             this.applicationReports = this.applicationReports.concat(data.code.reports)
             this.applicationReports = this.applicationReports.concat(data.infrastructure.reports)
+            let values = this.applicationReports
+            this.applicationReports = {
+              total: values.length,
+              rows: values,
+            }
             $('#table_reports_overview').bootstrapTable('load', this.applicationReports);
         })
          ApiFetchTests().then(data => {
-            this.securityTests = data
+            this.securityTests = {
+              total: data.length,
+              rows: data,
+            }
             $('#table_tests_overview').bootstrapTable('load', this.securityTests);
         })
     },
