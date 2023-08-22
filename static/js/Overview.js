@@ -216,14 +216,14 @@ const OverviewPage = {
                     class="table-scroll"
                     :adaptive-height="true"
                 >
-                    <template #actions="{master}">
+                    <!--<template #actions="{master}">
                     <div class="form-group text-right mb-0">
                         <button type="button" class="btn btn-secondary btn-icon btn-icon__purple mr-2"
                             @click="master.table_action('refresh')">
                         <i class="fas fa-sync"></i>
                     </button>
                     </div>
-                    </template>
+                    </template>-->
                     <template #table_headers="{master}">
                         <th scope="col" data-checkbox="true"></th>
                         <th data-visible="false" data-field="id">index</th>
