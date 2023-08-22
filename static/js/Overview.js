@@ -227,8 +227,8 @@ const OverviewPage = {
                     <template #table_headers="{master}">
                         <th scope="col" data-checkbox="true"></th>
                         <th data-visible="false" data-field="id">index</th>
+                        <!-- data-formatter="report_formatters.name" -->
                         <th scope="col" data-sortable="true" data-field="name"
-                            data-formatter="report_formatters.name"
                         >
                             Name
                         </th>
